@@ -1,0 +1,20 @@
+/*
+ * The Drake - CSS Variables
+ * Global color palette and spacing
+ */
+
+.root {
+    /* Text Colors */
+    -fx-color-text-light: #f0e6d2;
+    -fx-color-text-white: #ffffff;
+
+    /* Background Colors */
+    -fx-color-bg-darker: rgba(20, 20, 30, 0.5);
+    -fx-color-bg-button: rgba(40, 40, 50, 0.6);
+    -fx-color-bg-button-hover: rgba(60, 60, 70, 0.8);
+
+    /* Border Colors */
+    -fx-color-border-gold: #c9a961;
+    -fx-color-border-gold-light: #d4af37;
+
+}
