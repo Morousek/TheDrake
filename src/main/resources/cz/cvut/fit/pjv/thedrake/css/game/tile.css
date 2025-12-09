@@ -1,0 +1,23 @@
+/*
+ * The Drake - Tile Styles
+ * Styles for individual game tiles
+ */
+
+.tile-view {
+    -fx-border-color: #3a3a3a;
+    -fx-border-width: 1px;
+}
+
+.tile-view:hover {
+    -fx-border-color: #5a5a5a;
+}
+
+.tile-view:pressed {
+    -fx-border-color: #7a7a7a;
+}
+
+.tile-view-selected {
+    -fx-border-color: #d4af37;
+    -fx-border-width: 3px;
+    -fx-effect: dropshadow(gaussian, #d4af37, 10, 0.5, 0, 0);
+}

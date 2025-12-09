@@ -8,7 +8,7 @@
 
 <StackPane xmlns="http://javafx.com/javafx/17.0.12"
            xmlns:fx="http://javafx.com/fxml/1"
-           fx:controller="cz.cvut.fit.pjv.thedrake.MainMenuController"
+           fx:controller="cz.cvut.fit.pjv.thedrake.ui.controllers.MainMenuController"
            styleClass="menu-background">
 
     <!-- Menu Content -->

@@ -1,0 +1,8 @@
+/*
+ * The Drake - Game Module
+ * Entry point for all game-related styles
+ */
+
+@import "board.css";
+@import "tile.css";
+@import "panel.css";

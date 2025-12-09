@@ -1,4 +1,4 @@
-package cz.cvut.fit.pjv.thedrake;
+package cz.cvut.fit.pjv.thedrake.ui;
 
 import javafx.application.Application;
 

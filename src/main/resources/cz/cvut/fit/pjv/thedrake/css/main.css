@@ -7,3 +7,4 @@
 @import "variables.css";  /* CSS variables and constants */
 @import "common.css";     /* Common/shared styles */
 @import "menu.css";       /* Menu-specific styles */
+@import "game/game.css";  /* Game-specific styles */
