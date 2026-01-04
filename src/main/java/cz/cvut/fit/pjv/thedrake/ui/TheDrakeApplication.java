@@ -18,8 +18,8 @@ public class TheDrakeApplication extends Application {
 
         // Set window properties
         stage.setTitle("The Drake");
-        stage.setMinWidth(640);
-        stage.setMinHeight(480);
+        stage.setMinWidth(1024);
+        stage.setMinHeight(768);
         stage.setScene(scene);
         stage.show();
     }

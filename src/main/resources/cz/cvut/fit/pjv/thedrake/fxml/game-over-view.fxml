@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns="http://javafx.com/javafx/17.0.12"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="cz.cvut.fit.pjv.thedrake.ui.controllers.GameOverController"
+      alignment="CENTER"
+      spacing="20"
+      styleClass="game-over-overlay">
+    
+    <padding>
+        <Insets top="40" right="40" bottom="40" left="40"/>
+    </padding>
+    
+    <!-- Title -->
+    <Label text="Konec hry!" styleClass="game-over-title"/>
+    
+    <!-- Winner info -->
+    <Label fx:id="winnerLabel" styleClass="game-over-winner"/>
+    
+    <!-- Reason -->
+    <Label fx:id="reasonLabel" styleClass="game-over-reason" wrapText="true" maxWidth="300"/>
+    
+    <!-- Buttons -->
+    <HBox alignment="CENTER" spacing="15">
+        <Button text="Nová hra" styleClass="game-over-button" onAction="#onNewGame"/>
+        <Button text="Hlavní menu" styleClass="game-over-button" onAction="#onMainMenu"/>
+    </HBox>
+    
+</VBox>

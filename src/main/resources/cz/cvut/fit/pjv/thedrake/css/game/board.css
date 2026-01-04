@@ -1,17 +1,15 @@
 /*
  * The Drake - Board Styles
- * Styles for the game board container and grid
+ * Game board container and grid layout
  */
 
-/* Main board container */
 .game-board-container {
     -fx-background-color: #2b2520;
     -fx-padding: 20px;
 }
 
-/* Board grid */
 .board-view {
     -fx-background-color: #1a1410;
     -fx-padding: 10px;
-    -fx-background-radius: 5px;
+    -fx-background-radius: 4px;
 }

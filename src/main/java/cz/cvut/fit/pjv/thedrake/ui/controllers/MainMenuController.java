@@ -1,15 +1,10 @@
 package cz.cvut.fit.pjv.thedrake.ui.controllers;
 
+import cz.cvut.fit.pjv.thedrake.ui.utils.SceneNavigator;
 import javafx.application.Platform;
 import javafx.beans.binding.Bindings;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.stage.Stage;
-
-import java.io.IOException;
 
 /**
  * Controller for the main menu screen.
@@ -69,32 +64,12 @@ public class MainMenuController {
 
     /**
      * Handles multiplayer game button click.
-     * Starts a local multiplayer game (two players on one computer).
+     * Opens game setup screen for local multiplayer.
      */
     @FXML
     private void onMultiplayer() {
-        System.out.println("Starting multiplayer game...");
-        try {
-            // Load game view FXML
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/cz/cvut/fit/pjv/thedrake/fxml/game-view.fxml"));
-            Parent root = loader.load();
-
-            // Get the controller (GameState is created automatically in initialize())
-            GameController controller = loader.getController();
-
-            // Switch to game scene
-            Stage stage = (Stage) buttonMultiplayer.getScene().getWindow();
-            Scene gameScene = new Scene(root);
-
-            // Load CSS
-            gameScene.getStylesheets().add(getClass().getResource("/cz/cvut/fit/pjv/thedrake/css/main.css").toExternalForm());
-
-            stage.setScene(gameScene);
-            stage.setTitle("The Drake - Game");
-        } catch (IOException e) {
-            System.err.println("Failed to load game view: " + e.getMessage());
-            e.printStackTrace();
-        }
+        System.out.println("Opening game setup...");
+        SceneNavigator.navigateTo(buttonMultiplayer, SceneNavigator.GAME_SETUP, "The Drake - Nastavení hry");
     }
 
     /**

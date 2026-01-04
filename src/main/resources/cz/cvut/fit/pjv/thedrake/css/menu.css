@@ -1,9 +1,10 @@
 /*
  * The Drake - Menu Styles
- * Specific styles for the main menu screen
+ * Main menu and game setup screens
  */
 
-/* Main menu background container */
+/* ===== Main Menu ===== */
+
 .menu-background {
     -fx-background-image: url('../../../../../../images/main_screen_drake.jpg');
     -fx-background-size: 100% 100%;
@@ -11,21 +12,16 @@
     -fx-background-repeat: no-repeat;
 }
 
-/* Menu container with transparent background */
 .menu-container {
     -fx-background-color: transparent;
     -fx-padding: 40px;
 }
 
 /* Spacers */
-.spacer-large {
-    -fx-pref-height: 50px;
-}
+.spacer-large { -fx-pref-height: 50px; }
+.spacer-medium { -fx-pref-height: 30px; }
 
-.spacer-medium {
-    -fx-pref-height: 30px;
-}
-
+/* Menu Button */
 .menu-button {
     -fx-background-color: -fx-color-bg-button;
     -fx-text-fill: -fx-color-text-light;
@@ -47,11 +43,102 @@
 
 .menu-button:pressed {
     -fx-background-color: -fx-color-bg-darker;
-    -fx-scale-y: 0.98;
     -fx-scale-x: 0.98;
+    -fx-scale-y: 0.98;
 }
 
 .menu-button:disabled {
     -fx-opacity: 0.5;
     -fx-cursor: default;
 }
+
+/* ===== Game Setup Screen ===== */
+
+.setup-container {
+    -fx-background-color: rgba(30, 30, 40, 0.85);
+    -fx-border-color: -fx-color-border-gold;
+    -fx-border-width: 3px;
+    -fx-border-radius: 15px;
+    -fx-background-radius: 15px;
+}
+
+.setup-title {
+    -fx-font-size: 32px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -fx-color-border-gold;
+    -fx-padding: 0 0 20px 0;
+}
+
+.setup-section {
+    -fx-padding: 10px 20px;
+}
+
+.setup-label {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -fx-color-text-light;
+}
+
+.setup-value {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -fx-color-border-gold;
+    -fx-min-width: 50px;
+    -fx-alignment: center;
+}
+
+.setup-slider {
+    -fx-pref-width: 300px;
+}
+
+.setup-slider .track {
+    -fx-background-color: -fx-color-bg-button-hover;
+    -fx-background-radius: 5px;
+}
+
+.setup-slider .thumb {
+    -fx-background-color: -fx-color-border-gold;
+    -fx-background-radius: 10px;
+}
+
+.setup-slider .axis {
+    -fx-tick-label-fill: -fx-color-text-light;
+}
+
+/* Setup buttons */
+.setup-button {
+    -fx-background-color: -fx-color-bg-button;
+    -fx-text-fill: -fx-color-text-light;
+    -fx-border-color: -fx-color-border-gold;
+    -fx-border-width: 2px;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-padding: 12px 24px;
+    -fx-cursor: hand;
+}
+
+.setup-button:hover {
+    -fx-background-color: -fx-color-bg-button-hover;
+    -fx-border-color: -fx-color-border-gold-light;
+}
+
+.setup-button-primary {
+    -fx-background-color: rgba(60, 80, 60, 0.8);
+    -fx-text-fill: -fx-color-text-white;
+    -fx-border-color: #7cb342;
+    -fx-border-width: 2px;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-padding: 12px 24px;
+    -fx-cursor: hand;
+}
+
+.setup-button-primary:hover {
+    -fx-background-color: rgba(80, 110, 80, 0.9);
+    -fx-border-color: #8bc34a;
+}
+

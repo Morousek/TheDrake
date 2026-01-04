@@ -9,7 +9,6 @@
             xmlns:fx="http://javafx.com/fxml/1"
             fx:controller="cz.cvut.fit.pjv.thedrake.ui.controllers.GameController"
             prefHeight="700.0" prefWidth="900.0">
-
     <!-- Game Board Container -->
     <center>
         <BorderPane fx:id="gameContainer" styleClass="game-board-container">
@@ -17,17 +16,4 @@
         </BorderPane>
     </center>
 
-    <!-- Right - Side Panel (optional - for game info, controls, etc.) -->
-    <right>
-        <VBox spacing="10.0" styleClass="game-info-panel">
-            <padding>
-                <Insets top="20.0" right="20.0" bottom="20.0" left="20.0" />
-            </padding>
-
-            <Label text="The Drake" styleClass="game-title" />
-            <Label text="Game Info Panel" styleClass="game-info" />
-
-            <!-- TODO: Add game controls, player info, etc. -->
-        </VBox>
-    </right>
 </BorderPane>

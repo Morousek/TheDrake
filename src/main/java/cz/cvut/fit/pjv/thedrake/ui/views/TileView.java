@@ -3,7 +3,9 @@ package cz.cvut.fit.pjv.thedrake.ui.views;
 import cz.cvut.fit.pjv.thedrake.board.BoardPos;
 import cz.cvut.fit.pjv.thedrake.board.Tile;
 import cz.cvut.fit.pjv.thedrake.game.Move;
-import cz.cvut.fit.pjv.thedrake.ui.TileBackgrounds;
+import cz.cvut.fit.pjv.thedrake.ui.utils.TileBackgrounds;
+import cz.cvut.fit.pjv.thedrake.ui.services.GameContext;
+import cz.cvut.fit.pjv.thedrake.ui.utils.StyleHelper;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 
@@ -16,12 +18,12 @@ public class TileView extends Pane {
 
     private final BoardPos position;
 
-    private final TileViewContext context;
+    private final GameContext context;
 
     private final ImageView moveImage;
     private Move move;
 
-    public TileView(Tile tile, BoardPos position, TileViewContext context) {
+    public TileView(Tile tile, BoardPos position, GameContext context) {
         this.tile = tile;
         this.position = position;
         this.context = context;
@@ -57,18 +59,19 @@ public class TileView extends Pane {
             context.executeMove(move);
         } else if(tile.hasTroop()) {
             select();
+        } else {
+            // Clicked on empty tile - clear any selection
+            context.clearSelection();
         }
     }
 
     private void select() {
-        if (!getStyleClass().contains("tile-view-selected")) {
-            getStyleClass().add("tile-view-selected");
-        }
+        StyleHelper.addClass(this, "tile-view-selected");
         context.tileViewSelected(this);
     }
 
     public void unselect() {
-        getStyleClass().remove("tile-view-selected");
+        StyleHelper.removeClass(this, "tile-view-selected");
     }
 
     public void setMove(Move move) {

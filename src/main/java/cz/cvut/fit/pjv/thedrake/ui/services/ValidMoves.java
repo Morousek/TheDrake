@@ -1,4 +1,4 @@
-package cz.cvut.fit.pjv.thedrake.ui;
+package cz.cvut.fit.pjv.thedrake.ui.services;
 
 
 import cz.cvut.fit.pjv.thedrake.actions.PlaceFromStack;

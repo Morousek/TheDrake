@@ -1,20 +1,34 @@
 /*
  * The Drake - CSS Variables
- * Global color palette and spacing
+ * Global color palette (only colors work as CSS variables in JavaFX)
  */
 
 .root {
-    /* Text Colors */
+    /* ===== Text Colors ===== */
     -fx-color-text-light: #f0e6d2;
     -fx-color-text-white: #ffffff;
+    -fx-color-text-muted: #888888;
+    -fx-color-text-dark: #666666;
 
-    /* Background Colors */
+    /* ===== Background Colors ===== */
+    -fx-color-bg-dark: rgba(40, 35, 30, 0.95);
     -fx-color-bg-darker: rgba(20, 20, 30, 0.5);
+    -fx-color-bg-panel: rgba(60, 55, 50, 0.8);
     -fx-color-bg-button: rgba(40, 40, 50, 0.6);
     -fx-color-bg-button-hover: rgba(60, 60, 70, 0.8);
+    -fx-color-bg-overlay: rgba(0, 0, 0, 0.85);
 
-    /* Border Colors */
+    /* ===== Border Colors ===== */
     -fx-color-border-gold: #c9a961;
     -fx-color-border-gold-light: #d4af37;
+    -fx-color-border-brown: #8b7355;
 
+    /* ===== Player Colors ===== */
+    -fx-color-blue: #4a90d9;
+    -fx-color-orange: #d97a4a;
+    -fx-color-green: #4aff4a;
+
+    /* ===== Selection Colors ===== */
+    -fx-color-selected: #ffcc00;
+    -fx-color-selected-bg: rgba(255, 204, 0, 0.3);
 }

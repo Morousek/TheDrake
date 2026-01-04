@@ -1,4 +1,4 @@
-package cz.cvut.fit.pjv.thedrake.ui;
+package cz.cvut.fit.pjv.thedrake.ui.utils;
 
 import cz.cvut.fit.pjv.thedrake.board.BoardTile;
 import cz.cvut.fit.pjv.thedrake.board.Tile;

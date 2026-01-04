@@ -1,6 +1,6 @@
 /*
  * The Drake - Tile Styles
- * Styles for individual game tiles
+ * Individual game tiles and selection states
  */
 
 .tile-view {
@@ -17,7 +17,7 @@
 }
 
 .tile-view-selected {
-    -fx-border-color: #d4af37;
+    -fx-border-color: -fx-color-border-gold-light;
     -fx-border-width: 3px;
-    -fx-effect: dropshadow(gaussian, #d4af37, 10, 0.5, 0, 0);
+    -fx-effect: dropshadow(gaussian, -fx-color-border-gold-light, 10, 0.5, 0, 0);
 }

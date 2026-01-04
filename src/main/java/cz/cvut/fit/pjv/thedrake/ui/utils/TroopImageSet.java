@@ -1,4 +1,4 @@
-package cz.cvut.fit.pjv.thedrake.ui;
+package cz.cvut.fit.pjv.thedrake.ui.utils;
 
 import cz.cvut.fit.pjv.thedrake.troops.PlayingSide;
 import cz.cvut.fit.pjv.thedrake.troops.TroopFace;
