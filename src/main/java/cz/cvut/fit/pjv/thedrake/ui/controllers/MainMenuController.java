@@ -6,10 +6,7 @@ import javafx.beans.binding.Bindings;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 
-/**
- * Controller for the main menu screen.
- * Handles user interactions with menu buttons.
- */
+
 public class MainMenuController {
 
     @FXML
@@ -24,9 +21,6 @@ public class MainMenuController {
     @FXML
     private Button buttonExit;
 
-    /**
-     * Initialize method - sets up responsive button widths.
-     */
     @FXML
     private void initialize() {
         // Make buttons responsive - width scales with window size
@@ -37,9 +31,6 @@ public class MainMenuController {
         setupResponsiveButton(buttonExit);
     }
 
-    /**
-     * Sets up responsive width for a button based on scene width.
-     */
     private void setupResponsiveButton(Button button) {
         button.sceneProperty().addListener((obs, oldScene, newScene) -> {
             if (newScene != null) {
@@ -52,40 +43,24 @@ public class MainMenuController {
         });
     }
 
-    /**
-     * Handles single player game button click.
-     * Currently disabled - will be implemented later.
-     */
+
     @FXML
     private void onSinglePlayer() {
         System.out.println("Single player game - Not implemented yet");
-        // TODO: Implement single player game logic
     }
 
-    /**
-     * Handles multiplayer game button click.
-     * Opens game setup screen for local multiplayer.
-     */
     @FXML
     private void onMultiplayer() {
         System.out.println("Opening game setup...");
         SceneNavigator.navigateTo(buttonMultiplayer, SceneNavigator.GAME_SETUP, "The Drake - Nastavení hry");
     }
 
-    /**
-     * Handles online game button click.
-     * Currently disabled - will be implemented later.
-     */
+
     @FXML
     private void onOnline() {
         System.out.println("Online game - Not implemented yet");
-        // TODO: Implement online game logic
     }
 
-    /**
-     * Handles exit button click.
-     * Closes the application.
-     */
     @FXML
     private void onExit() {
         System.out.println("Exiting application...");

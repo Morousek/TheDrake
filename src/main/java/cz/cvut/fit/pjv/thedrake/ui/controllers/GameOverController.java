@@ -5,9 +5,7 @@ import cz.cvut.fit.pjv.thedrake.troops.PlayingSide;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 
-/**
- * Controller for the game over overlay.
- */
+
 public class GameOverController {
     
     @FXML
@@ -19,15 +17,6 @@ public class GameOverController {
     private Runnable onNewGameCallback;
     private Runnable onMainMenuCallback;
 
-    /**
-     * Initialize the game over view with result data.
-     * 
-     * @param result the game result (VICTORY or DRAW)
-     * @param winner the winning side (null if draw)
-     * @param reason description of how the game ended
-     * @param onNewGame callback for starting a new game
-     * @param onMainMenu callback for returning to main menu
-     */
     public void initialize(GameResult result, PlayingSide winner, String reason,
                           Runnable onNewGame, Runnable onMainMenu) {
         this.onNewGameCallback = onNewGame;

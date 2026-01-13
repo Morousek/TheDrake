@@ -53,18 +53,13 @@ public class PlayerPanelView extends VBox {
         getChildren().addAll(playerLabel, turnIndicator, stackView, capturedView);
     }
 
-    /**
-     * Update all child views to reflect current game state.
-     */
+
     public void update() {
         updateTurnIndicator();
         stackView.update();
         capturedView.update();
     }
 
-    /**
-     * Update the turn indicator label.
-     */
     private void updateTurnIndicator() {
         boolean onTurn = context.isOnTurn(side);
         turnIndicator.setText(onTurn ? "● Na tahu" : "○ Čeká");
@@ -73,20 +68,9 @@ public class PlayerPanelView extends VBox {
             "turn-indicator-active", "turn-indicator-inactive");
     }
 
-    /**
-     * Clear selection in the stack view.
-     */
     public void clearSelection() {
         stackView.clearSelection();
     }
-
-    /**
-     * Check if stack has selection.
-     */
-    public boolean hasStackSelection() {
-        return stackView.hasSelection();
-    }
-
     public PlayingSide getSide() {
         return side;
     }

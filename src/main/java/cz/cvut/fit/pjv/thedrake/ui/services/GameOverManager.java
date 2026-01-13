@@ -8,10 +8,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.StackPane;
 
-/**
- * Manages game over state and overlay display.
- * Handles showing/hiding the game over dialog and navigation callbacks.
- */
 public class GameOverManager {
 
     private final Parent gameContainer;
@@ -19,41 +15,24 @@ public class GameOverManager {
     private final Runnable onMainMenu;
     private boolean gameOver = false;
 
-    /**
-     * Creates a new GameOverManager.
-     *
-     * @param gameContainer the main game container node
-     * @param onNewGame callback when "New Game" is clicked
-     * @param onMainMenu callback when "Main Menu" is clicked
-     */
     public GameOverManager(Parent gameContainer, Runnable onNewGame, Runnable onMainMenu) {
         this.gameContainer = gameContainer;
         this.onNewGame = onNewGame;
         this.onMainMenu = onMainMenu;
     }
 
-    /**
-     * Check if the game is over.
-     */
+
     public boolean isGameOver() {
         return gameOver;
     }
 
-    /**
-     * Reset the game over state (for new game).
-     */
+
     public void reset() {
         gameOver = false;
         removeOverlay();
     }
 
-    /**
-     * Show the game over overlay.
-     *
-     * @param result the game result
-     * @param winner the winning side
-     * @param reason description of how the game ended
-     */
+
     public void showGameOver(GameResult result, PlayingSide winner, String reason) {
         gameOver = true;
 
@@ -83,9 +62,7 @@ public class GameOverManager {
         }
     }
 
-    /**
-     * Remove the game over overlay from the scene.
-     */
+
     private void removeOverlay() {
         Scene scene = gameContainer.getScene();
         if (scene != null) {

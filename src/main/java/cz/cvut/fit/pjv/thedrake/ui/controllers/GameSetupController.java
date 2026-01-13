@@ -6,10 +6,6 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.Slider;
 
-/**
- * Controller for game setup screen.
- * Allows players to configure board size and mountain count.
- */
 public class GameSetupController {
 
     @FXML

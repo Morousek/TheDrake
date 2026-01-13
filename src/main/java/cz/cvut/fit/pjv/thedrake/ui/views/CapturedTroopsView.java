@@ -13,10 +13,7 @@ import javafx.scene.layout.VBox;
 
 import java.util.List;
 
-/**
- * View component displaying captured troops for a player.
- * Shows all enemy troops that this player has captured.
- */
+
 public class CapturedTroopsView extends VBox {
     
     private final PlayingSide side;
@@ -48,9 +45,7 @@ public class CapturedTroopsView extends VBox {
         update();
     }
 
-    /**
-     * Update the captured troops view to reflect current game state.
-     */
+
     public void update() {
         capturedContainer.getChildren().clear();
         

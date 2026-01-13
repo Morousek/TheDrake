@@ -27,10 +27,6 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 
-/**
- * Controller for the game screen.
- * Implements GameContext to coordinate all UI components.
- */
 public class GameController implements GameContext {
 
     @FXML
@@ -47,11 +43,6 @@ public class GameController implements GameContext {
     private GameOverManager gameOverManager;
     
     private boolean stackSelected = false;
-
-    /**
-     * Initialize method called after FXML is loaded.
-     * Creates a game state starting with empty board (no troops placed).
-     */
     @FXML
     private void initialize() {
         // Create default game state
@@ -91,8 +82,6 @@ public class GameController implements GameContext {
     }
 
 
-
-    // ========== GameContext Implementation ==========
 
     @Override
     public void tileViewSelected(TileView tileView) {
@@ -211,11 +200,6 @@ public class GameController implements GameContext {
         
         gamePhaseLabel.setText(phaseText);
     }
-
-    /**
-     * Check if current player has any valid moves. If not, they lose.
-     * @return true if game ended due to no moves
-     */
     private boolean checkForNoMoves() {
         if (gameState.result() != GameResult.IN_PLAY) {
             return false;
@@ -242,10 +226,6 @@ public class GameController implements GameContext {
         }
         return false;
     }
-
-    /**
-     * Start a new game with the same settings.
-     */
     private void startNewGame() {
         gameOverManager.reset();
         gameState = createGameState(boardSize, mountainCount);
@@ -261,17 +241,11 @@ public class GameController implements GameContext {
         
         boardView.showStackMoves();
     }
-
-    /**
-     * Return to main menu.
-     */
     private void goToMainMenu() {
         SceneNavigator.navigateTo(gameContainer, SceneNavigator.MAIN_MENU, "The Drake");
     }
 
-    /**
-     * Sets the game state with board configuration.
-     */
+
     public void setGameState(GameState gameState, int boardSize, int mountainCount) {
         this.gameState = gameState;
         this.boardSize = boardSize;
@@ -289,18 +263,10 @@ public class GameController implements GameContext {
         }
     }
 
-    /**
-     * Gets the current game state.
-     *
-     * @return current GameState
-     */
     public GameState gameState() {
         return gameState;
     }
 
-    /**
-     * Create a new game state with random mountain placement.
-     */
     public static GameState createGameState(int boardSize, int mountainCount) {
         Board board = new Board(boardSize);
         

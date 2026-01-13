@@ -12,7 +12,6 @@
     <!-- Game Board Container -->
     <center>
         <BorderPane fx:id="gameContainer" styleClass="game-board-container">
-            <!-- BoardView will be added here programmatically -->
         </BorderPane>
     </center>
 

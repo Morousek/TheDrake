@@ -13,10 +13,6 @@ import javafx.scene.layout.VBox;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * View component displaying the troop stack for a player.
- * Shows all troops that can still be placed on the board.
- */
 public class TroopStackView extends VBox {
     
     private final PlayingSide side;
@@ -77,9 +73,6 @@ public class TroopStackView extends VBox {
         update();
     }
 
-    /**
-     * Update the stack view to reflect current game state.
-     */
     public void update() {
         troopsContainer.getChildren().clear();
         itemViews.clear();
@@ -96,9 +89,7 @@ public class TroopStackView extends VBox {
         }
     }
 
-    /**
-     * Called when a stack item is clicked.
-     */
+
     void itemSelected(TroopStackItemView item) {
         if (!context.isOnTurn(side)) {
             return; // Can't select if not on turn
@@ -116,9 +107,6 @@ public class TroopStackView extends VBox {
         context.stackTroopSelected(side);
     }
 
-    /**
-     * Clear selection.
-     */
     public void clearSelection() {
         if (selectedItem != null) {
             selectedItem.setSelected(false);
@@ -126,9 +114,6 @@ public class TroopStackView extends VBox {
         }
     }
 
-    /**
-     * Check if this stack has a selected item.
-     */
     public boolean hasSelection() {
         return selectedItem != null;
     }

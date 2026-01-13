@@ -46,9 +46,7 @@ public class BoardView extends GridPane {
         }
     }
 
-    /**
-     * Update all tiles to reflect current game state.
-     */
+
     public void update() {
         GameState gameState = context.getGameState();
         validMoves = new ValidMoves(gameState);
@@ -58,10 +56,7 @@ public class BoardView extends GridPane {
         }
     }
 
-    /**
-     * Called when a tile is selected on the board.
-     * Shows possible moves for the selected troop.
-     */
+
     public void tileViewSelected(TileView tileView) {
         if(selectedTileView != null && selectedTileView != tileView){
             selectedTileView.unselect();
@@ -72,9 +67,7 @@ public class BoardView extends GridPane {
         showMoves(validMoves.boardMoves(tileView.position()));
     }
 
-    /**
-     * Clear the current tile selection.
-     */
+
     public void clearSelection() {
         if (selectedTileView != null) {
             selectedTileView.unselect();
@@ -83,9 +76,7 @@ public class BoardView extends GridPane {
         hideMoves();
     }
 
-    /**
-     * Show possible placement positions when a stack troop is selected.
-     */
+
     public void showStackMoves() {
         hideMoves();
         showMoves(validMoves.movesFromStack());

@@ -8,11 +8,7 @@ import cz.cvut.fit.pjv.thedrake.ui.utils.StyleHelper;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 
-/**
- * View component representing a single troop in the stack.
- * Shows the troop's front (AVERS) image and handles selection.
- * Only the top item (first in stack) is clickable.
- */
+
 public class TroopStackItemView extends Pane {
     
     private final Troop troop;
@@ -61,9 +57,6 @@ public class TroopStackItemView extends Pane {
         stackView.itemSelected(this);
     }
 
-    /**
-     * Set the selected state of this item.
-     */
     public void setSelected(boolean selected) {
         this.selected = selected;
         StyleHelper.toggleClass(this, "troop-stack-item-selected", selected);

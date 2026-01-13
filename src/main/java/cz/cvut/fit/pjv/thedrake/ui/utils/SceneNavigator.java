@@ -9,10 +9,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.function.Consumer;
 
-/**
- * Utility class for navigating between scenes in the application.
- * Centralizes scene switching logic to avoid code duplication across controllers.
- */
+
 public final class SceneNavigator {
 
     // FXML paths as constants
